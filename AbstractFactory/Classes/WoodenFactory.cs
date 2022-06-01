@@ -8,7 +8,8 @@ namespace AbstractFactory.Classes
 {
     public class WoodenFactory:IAbstractFactory
     {
-        public IHouseElements ProduceWall() {
+        public IHouseElements ProduceWall() 
+        {
             return new WoodenWall();
         }
         public IHouseElements ProduceDoor()

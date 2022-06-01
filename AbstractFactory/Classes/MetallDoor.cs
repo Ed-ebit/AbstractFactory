@@ -9,9 +9,6 @@ namespace AbstractFactory.Classes
 {
     public class MetallDoor: IHouseElements
     {
-        public Boolean IsOpen() {
-            return false;
-        }
 
         public void Description()
         {

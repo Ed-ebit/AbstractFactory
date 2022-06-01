@@ -9,5 +9,6 @@ namespace AbstractFactory.Interfaces
     public interface IHouseElements
     {
         public void Description();
+        //public string Count();
     }
 }
