@@ -7,11 +7,11 @@ using AbstractFactory.Interfaces;
 
 namespace AbstractFactory.Classes
 {
-    internal class WoodenRoof: IRoof
+    public class WoodenRoof: IHouseElements
     {
-        public string Description()
+        public void Description()
         {
-            return "Ich bin ein Holzdach!";
+            Console.WriteLine("Ich bin ein Holzdach!");
         }
     }
 }

@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace AbstractFactory.Interfaces
 {
-    internal interface IAbstractFactory
+    public interface IAbstractFactory
     {
-        public void getWall() { }
-        public void getDoor() { }
-        public void getRoof() { }
+        IHouseElements ProduceWall();
+        IHouseElements ProduceDoor();
+        IHouseElements ProduceRoof(); 
     }
 }

@@ -6,23 +6,53 @@
 //https://www.philipphauer.de/study/se/design-pattern/abstract-factory.php
 
 using AbstractFactory.Classes;
+using AbstractFactory.Interfaces;
 
-Console.WriteLine("Hallo! Abstract Factory for Creation of Varying Sets of product-types here!");
+Console.WriteLine("Hello! Abstract Factory for Creation of Varying Sets of product-types here!");
 Console.WriteLine("Holz oder Metallhaus?");
-string selection = null;
-while (selection == null)
+string selection = "";
+IAbstractFactory generator = null;
+
+do
 {
     selection = Console.ReadLine();
     selection = selection.ToLower();
     if (selection == "holz")
     {
-        WoodenFactory generator = new WoodenFactory();
         Console.WriteLine("Holzhaus!");
+        generator = new WoodenFactory();
     }
     if (selection == "metall")
     {
-        MetallFactory generator = new MetallFactory();
         Console.WriteLine("Metallhaus!");
+        generator = new MetallFactory();
+    }
+    else Console.WriteLine("ungültige Eingabe");
+} while (selection != "holz" && selection != "metall");
 
+while (true)
+{
+    Console.WriteLine("press: 1 for a Roof, 2 for a wall, 3 for a Door, 4 for exit");
+    selection = Console.ReadLine();
+    selection = selection.ToLower();
+    if (selection == "1")
+    {
+        generator.ProduceRoof().Description();
+    }
+    if (selection == "2")
+    {
+        generator.ProduceWall().Description();
+    }
+    if (selection == "3")
+    {
+        generator.ProduceDoor().Description();
+    }
+    if (selection == "4")
+    {
+        return;
     }
 }
+
+
+
+

@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace AbstractFactory.Interfaces
 {
-    public interface IWall
+    public interface IHouseElements
     {
-        public void Description() { }
+        public void Description();
     }
 }

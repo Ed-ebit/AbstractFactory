@@ -8,17 +8,17 @@ using System.Threading.Tasks;
 
 namespace AbstractFactory.Classes
 {
-    internal class MetallFactory
+    public class MetallFactory:IAbstractFactory
     {
-        public IWall getWall()
+        public IHouseElements ProduceWall()
         {
             return new MetallWall();
         }
-        public IDoor getDoor()
+        public IHouseElements ProduceDoor()
         {
             return new MetallDoor();
         }
-        public IRoof getRoof()
+        public IHouseElements ProduceRoof()
         {
             return new MetallRoof();
         }

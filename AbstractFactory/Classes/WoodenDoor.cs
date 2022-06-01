@@ -7,15 +7,15 @@ using AbstractFactory.Interfaces;
 
 namespace AbstractFactory.Classes
 {
-    public class WoodenDoor:IDoor
+    public class WoodenDoor: IHouseElements
     {
         public Boolean IsOpen() {
             return false;
         }
 
-        public string Description()
+        public void Description()
         {
-            return "Ich bin eine Holztür!";
+            Console.WriteLine("Ich bin eine Holztür!");
         }
     }
 }

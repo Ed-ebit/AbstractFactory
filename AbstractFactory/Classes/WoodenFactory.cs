@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 using AbstractFactory.Interfaces;
 namespace AbstractFactory.Classes
 {
-    internal class WoodenFactory
+    public class WoodenFactory:IAbstractFactory
     {
-        public IWall getWall() {
+        public IHouseElements ProduceWall() {
             return new WoodenWall();
         }
-        public IDoor getDoor()
+        public IHouseElements ProduceDoor()
         {
             return new WoodenDoor();
         }
-        public IRoof  getRoof()
+        public IHouseElements ProduceRoof()
         {
             return new WoodenRoof();
         }

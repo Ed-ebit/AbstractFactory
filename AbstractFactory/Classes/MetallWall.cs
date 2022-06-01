@@ -7,11 +7,11 @@ using AbstractFactory.Interfaces;
 
 namespace AbstractFactory.Classes
 {
-    internal class MetallWall : IWall
+    public class MetallWall : IHouseElements
     {
-        public string Description()
+        public void Description()
         {
-            return "Ich bin eine Metallwand!";
+            Console.WriteLine("Ich bin eine Metallwand!");
         }
     }
 }
