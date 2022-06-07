@@ -1,9 +1,8 @@
-﻿// See https://aka.ms/new-console-template for more information
-// Frag: was soll die abstrakte Fabrik können? - Familie von Produkten erstellen ok.- aber ein einzelnes zu einer vorhandenen hinzufügen?
-// Kann das pattern nicht allein oder?
-// Vgl https://refactoring.guru/design-patterns/abstract-factory
-//vs.
-//https://www.philipphauer.de/study/se/design-pattern/abstract-factory.php
+﻿//The abstract factory pattern provides a way to encapsulate a group of individual factories that
+//have a common theme without specifying their concrete classes.[1] 
+//https://en.wikipedia.org/wiki/Abstract_factory_pattern
+
+
 
 using AbstractFactory.Classes;
 using AbstractFactory.Interfaces;
